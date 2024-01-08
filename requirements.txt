@@ -1,0 +1,12 @@
+Opencv-contrib-python==3.4.8.29
+# 3.4.2.17 is too old to be found for my pip.
+Matplotlib==3.7.3
+pyqt5==5.15.10
+torch==2.1.0
+Torchvision==0.16.0
+Torchsummary==1.5.1
+Tensorboard==2.14.0
+Pillow==10.1.0
+# The following is what I added for convenience. It's needed to run my code, but not needed for the HW.
+numpy==1.24.4
+tqdm==4.66.1
