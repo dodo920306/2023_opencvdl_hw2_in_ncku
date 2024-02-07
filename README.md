@@ -1,4 +1,4 @@
-# 2023_Introduction_to_Image-Processing_Computer-Vision_and_Deep-Learning_HW1_in_NCKU
+# Opencvdl HW2 In NCKU CSIE, 2023
 
 Implementation of a personal solution of the second homework in Introduction to Image Processing, Computer Vision, and Deep Learning courses in NCKU CSIE, 2023.
 
