@@ -92,13 +92,19 @@ Once you run main.py successfully, you should see some UI like this
 
 As you can see, the features are divided into 5 main parts: Hough Circle Transformation, Histogram Equalization, Morphology Operation, VGG19, ResNet50
 
+### Load Image
+
+The button will load a picture from the computer, enabling some of the following operation.
+
 ### Hough Circle Transformation
 
 There are 2 buttons can be clicked providing 2 different features:
 
-1. 
+1. Draw contour for the circles on the loaded picture.
 
-2. 
+2. Count the number of circles on the loaded picture.
+
+Load `Dataset_OpenCvDl_Hw2/Q1/coins.jpg` for a simple illustration.
 
 run
 
@@ -112,9 +118,9 @@ to get this part of UI independently.
 
 There are 1 buttons can be clicked providing 1 feature:
 
-1. 
+1. Apply 2 histogram Equalizations on the loaded picture to enhance clarity, 1 is by OpenCV `cv2.equalizeHist()`, the other is done manually.
 
-2. 
+Load `Dataset_OpenCvDl_Hw2/Q2/histoEqualGray2.png` for a simple illustration.
 
 run
 
@@ -129,13 +135,11 @@ to get this part of UI independently.
 
 There are 2 buttons can be clicked providing 2 different features:
 
-1. 
+1. Apply dilation and erosion to the loaded picture to fill loopholes on it.
 
-2. 
+2. Apply dilation and erosion to the loaded picture to wash away stains on it.
 
-3. 
-
-4. 
+Load `Dataset_OpenCvDl_Hw2/Q3/closing.png` and `Dataset_OpenCvDl_Hw2/Q3/opening.png` for a simple illustration.
 
 run
 
@@ -145,7 +149,19 @@ $ python Morphology_Operation.py
 
 to get this part of UI independently.
 
-### VGG19
+### MNIST Classifier Using VGG19
+
+There are 4 buttons can be clicked providing 4 different features:
+
+1. Show the model structure of this MNIST Classifier Using VGG19.
+
+2. Show Training/Validating Accuracy and Loss
+
+3. Predict the number drawn on the canvas aside.
+
+4. Reset the canvas.
+
+Draw a number on the canvas aside for a simple illustration.
 
 run
 
@@ -153,10 +169,23 @@ run
 $ python VGG19.py
 ```
 
-to get this part of UI independently.
+and type 1 to get this part of UI independently, or type 2 to train your own model with the CIFAR-10 dataset.
 
 ### ResNet50
 
+The picture here has to be loaded with a seperated button.
+
+There are 4 buttons can be clicked providing 4 different features:
+
+1. Show random pictures from `inference_dataset/Cat` and `inference_dataset/Dog` respectively.
+
+2. Show the model structure of this ResNet50.
+
+3. Show the accuracy with and without random erasing.
+
+4. Inference the loaded picture.
+
+Load a picture from `inference_dataset/` for a simple illustration.
 
 run
 
@@ -165,3 +194,13 @@ $ python ResNet50.py
 ```
 
 to get this part of UI independently.
+
+run
+
+```
+$ python train.py
+```
+
+to train this.
+
+> Pictures in `Dataset_OpenCvDl_Hw2_Q5/` are used to train this.

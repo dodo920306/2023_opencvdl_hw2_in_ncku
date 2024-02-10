@@ -26,10 +26,10 @@ class MyWidget(QGroupBox):
 
     def histogram_equalization(self):
         try:
-            _, axes = plt.subplots(2, 3, figsize=(10, 5))
-
             # While the picture read in by cv2.imread() is stored in 'BGR', the picture shown by plt.imshow() is treated as in 'RGB'.
             cimg = cv2.imread(self.filename)
+
+            _, axes = plt.subplots(2, 3, figsize=(10, 5))
             axes[0][0].imshow(cv2.cvtColor(cimg, cv2.COLOR_BGR2RGB))
             axes[0][0].set_title('Original Image')
             axes[0][0].axis('off')
@@ -66,7 +66,6 @@ class MyWidget(QGroupBox):
             axes[1][2].set_ylabel('Frequency')
             axes[1][2].set_title('Histogram of Equalized (Manual)')
             array1 = y.copy()
-
 
             img = cv2.equalizeHist(cv2.cvtColor(cimg, cv2.COLOR_BGR2GRAY))
             axes[0][1].imshow(cv2.cvtColor(img, cv2.COLOR_GRAY2RGB))

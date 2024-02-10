@@ -33,12 +33,12 @@ class MyWidget(QGroupBox):
 
     def draw_contour(self):
         try:
+            cimg = cv2.imread(self.filename)
             _, axes = plt.subplots(1, 3, figsize=(10, 4))
             axes.ravel()[0].set_title("Img_src")
             axes.ravel()[1].set_title("Img_process")
             axes.ravel()[2].set_title("Circle_center")
 
-            cimg = cv2.imread(self.filename)
             # While the picture read in by cv2.imread() is stored in 'BGR', the picture shown by plt.imshow() is treated as in 'RGB'.
             axes.ravel()[0].imshow(cv2.cvtColor(cimg, cv2.COLOR_BGR2RGB))
             img = cv2.cvtColor(cimg, cv2.COLOR_BGR2GRAY)

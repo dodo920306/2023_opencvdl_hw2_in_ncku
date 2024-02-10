@@ -1,7 +1,5 @@
 data
 .vscode
-Dataset*
-inference_dataset
 
 *.pth
 *.rar

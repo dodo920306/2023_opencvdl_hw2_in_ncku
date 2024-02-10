@@ -119,7 +119,8 @@ class MyWidget(QGroupBox):
         layout1.addWidget(button3)
         layout1.addSpacing(10)
         layout1.addWidget(button4)
-        layout1.setAlignment(Qt.AlignVCenter)
+        # layout1.setAlignment(Qt.AlignVCenter)
+        layout1.setContentsMargins(100, 10, 100, 10)
 
         layout2.addWidget(self.image)
         layout2.addWidget(self.label)
@@ -164,10 +165,10 @@ class MyWidget(QGroupBox):
     def inference(self):
         try:
             self.label.setText("Predict = ")
+            img = Image.open(self.filename)
             classes = ["Cat", "Dog"]
             model.load_state_dict(load("best_resnet18_weights.pth"))
             model.eval()
-            img = Image.open(self.filename)
 
             with no_grad():
                 # .unsqueeze(0) method is used to add a new dimension at the specified position in a tensor.
